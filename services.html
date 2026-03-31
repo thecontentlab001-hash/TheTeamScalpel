@@ -84,28 +84,28 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <a href="index.html" class="nav-brand">
         <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
-        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+        <div class="nav-brand-text">The Team <span>Scalpel</span></div>
       </a>
-      <div class="nav-links" style="align-items: center;">
+      <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html" class="active">Services</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
         <a href="feedback.html">Feedback</a>
-        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="nav-divider"></div>
         <div class="language-selector">
           <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
             <option value="en">English</option>
             <option value="hi">हिन्दी</option>
           </select>
         </div>
-        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Consult</a>
       </div>
-      <button class="mobile-menu-btn">
+      <button class="mobile-menu-btn" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -124,13 +124,13 @@
 
   <!-- General Surgery -->
   <section id="general" class="service-detail-section">
-    <div class="container asymmetric-grid">
-      <div style="grid-column: span 7;">
+    <div class="container service-grid">
+      <div class="service-content">
         <span class="overline">Abdominal Specialist</span>
-        <h2 class="reveal-text"><span>General Surgery</span></h2>
-        <p style="color: var(--text-muted); font-size: 1.125rem; margin-top: 1.5rem;">Expertise in addressing a broad range of complex diseases affecting the abdomen, digestive tract, endocrine system, and beyond.</p>
+        <h2 class="reveal-text">General Surgery</h2>
+        <p class="service-desc">Expertise in addressing a broad range of complex diseases affecting the abdomen, digestive tract, endocrine system, and beyond.</p>
         
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Conditions Treated</h4>
+        <h4 class="section-subtitle">Conditions Treated</h4>
         <ul class="details-list">
           <li>Hernia Repair (Inguinal, Ventral, Umbilical)</li>
           <li>Gallbladder Disease (Cholecystectomy)</li>
@@ -138,29 +138,29 @@
           <li>Thyroid and Parathyroid Disorders</li>
         </ul>
 
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Recovery & Insurance</h4>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Recovery times vary depending on the procedure. We accept major health insurance including CGHS and TPA cashless facilities.</p>
+        <h4 class="section-subtitle">Recovery & Insurance</h4>
+        <p class="small-desc">Recovery times vary depending on the procedure. We accept major health insurance including CGHS and TPA cashless facilities.</p>
         
         <a href="appointment.html" class="btn btn-primary" style="margin-top: 2rem;">Consult a Specialist</a>
       </div>
-      <div class="service-image tilt-card" style="grid-column: span 5; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
-        <img src="images/general_surgery.png" alt="General Surgery Operating Room" style="width:100%; height:100%; object-fit:cover;">
+      <div class="service-image tilt-card">
+        <img src="images/general_surgery.png" alt="General Surgery Operating Room">
       </div>
     </div>
   </section>
 
   <!-- Laparoscopic Surgery -->
   <section id="laparoscopic" class="service-detail-section">
-    <div class="container asymmetric-grid reverse" style="direction: ltr;">
-      <div class="service-image tilt-card" style="grid-column: span 5; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
-        <img src="images/laparoscopic_surgery.png" alt="Laparoscopic Surgery AI" style="width:100%; height:100%; object-fit:cover;">
+    <div class="container service-grid reverse">
+      <div class="service-image tilt-card">
+        <img src="images/laparoscopic_surgery.png" alt="Laparoscopic Surgery AI">
       </div>
-      <div style="grid-column: span 7; padding-left: 4rem;">
+      <div class="service-content">
         <span class="overline">Minimally Invasive</span>
-        <h2 class="reveal-text"><span>Laparoscopic Surgery</span></h2>
-        <p style="color: var(--text-muted); font-size: 1.125rem; margin-top: 1.5rem;">Pioneering minimally invasive techniques that utilize a tiny camera and specialized instruments inserted through minor incisions.</p>
+        <h2 class="reveal-text">Laparoscopic Surgery</h2>
+        <p class="service-desc">Pioneering minimally invasive techniques that utilize a tiny camera and specialized instruments inserted through minor incisions.</p>
         
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Elite Benefits</h4>
+        <h4 class="section-subtitle">Elite Benefits</h4>
         <ul class="details-list">
           <li>Significantly less post-operative pain</li>
           <li>Minimal scarring compared to open surgery</li>
@@ -168,8 +168,8 @@
           <li>Faster return to normal activities</li>
         </ul>
 
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Procedure Overview</h4>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Performed under general anesthesia. Small 0.5cm incisions are made to accommodate the laparoscope, and high-definition monitors are used to perfectly guide Dr. Agarwal's movements.</p>
+        <h4 class="section-subtitle">Procedure Overview</h4>
+        <p class="small-desc">Performed under general anesthesia. Small 0.5cm incisions are made to accommodate the laparoscope, and high-definition monitors are used to perfectly guide Dr. Agarwal's movements.</p>
         
         <a href="appointment.html" class="btn btn-outline" style="margin-top: 2rem;">Schedule Assessment</a>
       </div>
@@ -178,26 +178,26 @@
 
   <!-- Laser Surgery -->
   <section id="laser" class="service-detail-section">
-    <div class="container asymmetric-grid">
-      <div style="grid-column: span 7;">
+    <div class="container service-grid">
+      <div class="service-content">
         <span class="overline">Precision Technology</span>
-        <h2 class="reveal-text"><span>Laser Surgery Procedures</span></h2>
-        <p style="color: var(--text-muted); font-size: 1.125rem; margin-top: 1.5rem;">State-of-the-art technological advancement offering unmatched precision for targeted tissue treatment without bleeding.</p>
+        <h2 class="reveal-text">Laser Surgery Procedures</h2>
+        <p class="service-desc">State-of-the-art technological advancement offering unmatched precision for targeted tissue treatment without bleeding.</p>
         
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Conditions Treated</h4>
+        <h4 class="section-subtitle">Conditions Treated</h4>
         <ul class="details-list">
           <li>Varicose Veins (Endovenous Laser Ablation)</li>
           <li>Proctology conditions (Hemorrhoids, Fistulas, Piles)</li>
           <li>Soft Tissue Tumors</li>
         </ul>
 
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">The Tech Edge</h4>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Laser procedures seal nerve endings and blood vessels instantaneously as they cut, largely eliminating bleeding and dramatically reducing post-operative pain. Highly preferred day-care setup.</p>
+        <h4 class="section-subtitle">The Tech Edge</h4>
+        <p class="small-desc">Laser procedures seal nerve endings and blood vessels instantaneously as they cut, largely eliminating bleeding and dramatically reducing post-operative pain. Highly preferred day-care setup.</p>
         
         <a href="appointment.html" class="btn btn-primary" style="margin-top: 2rem;">Inquire About Laser</a>
       </div>
-      <div class="service-image tilt-card" style="grid-column: span 5; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
-        <img src="images/laser_surgery.png" alt="Laser Surgery AI" style="width:100%; height:100%; object-fit:cover;">
+      <div class="service-image tilt-card">
+        <img src="images/laser_surgery.png" alt="Laser Surgery AI">
       </div>
     </div>
   </section>
@@ -205,16 +205,18 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
-        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
-        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          The Team <span>Scalpel</span>
+        </div>
+        <p class="footer-tagline">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div>
+      <div class="footer-links-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="about.html">About Surgeon</a></li>
@@ -222,20 +224,20 @@
           <li><a href="gallery.html">Video Gallery</a></li>
           <li><a href="contact.html">Contact Clinic</a></li>
           <li><a href="appointment.html">Book Appointment</a></li>
-          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+          <li><a href="about.html#support" class="support-link">Support Our Cause</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Services</h4>
+      <div class="footer-services-col">
+        <h4>Specialties</h4>
         <ul>
           <li><a href="services.html#general">General Surgery</a></li>
           <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
           <li><a href="services.html#laser">Laser Precision</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
+      <div class="footer-contact-col">
+        <h4>Get In Touch</h4>
+        <ul class="contact-list">
           <li><i class="fas fa-phone"></i> +91 8130574541</li>
           <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
           <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>

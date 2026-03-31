@@ -133,10 +133,10 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <a href="index.html" class="nav-brand">
         <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
-        The Team <span style="color: var(--primary-light);">Scalpel</span>
+        <div class="nav-brand-text">The Team <span>Scalpel</span></div>
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -144,16 +144,17 @@
         <a href="services.html">Services</a>
         <a href="gallery.html" class="active">Gallery</a>
         <a href="contact.html">Contact</a>
-        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <a href="feedback.html">Feedback</a>
+        <div class="nav-divider"></div>
         <div class="language-selector">
           <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
             <option value="en">English</option>
             <option value="hi">हिन्दी</option>
           </select>
         </div>
-        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Consult</a>
       </div>
-      <button class="mobile-menu-btn">
+      <button class="mobile-menu-btn" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -330,16 +331,18 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
-        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
-        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          The Team <span>Scalpel</span>
+        </div>
+        <p class="footer-tagline">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div>
+      <div class="footer-links-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="about.html">About Surgeon</a></li>
@@ -347,20 +350,20 @@
           <li><a href="gallery.html">Video Gallery</a></li>
           <li><a href="contact.html">Contact Clinic</a></li>
           <li><a href="appointment.html">Book Appointment</a></li>
-          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+          <li><a href="about.html#support" class="support-link">Support Our Cause</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Services</h4>
+      <div class="footer-services-col">
+        <h4>Specialties</h4>
         <ul>
           <li><a href="services.html#general">General Surgery</a></li>
           <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
           <li><a href="services.html#laser">Laser Precision</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
+      <div class="footer-contact-col">
+        <h4>Get In Touch</h4>
+        <ul class="contact-list">
           <li><i class="fas fa-phone"></i> +91 8130574541</li>
           <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
           <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>

@@ -22,28 +22,28 @@
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-brand" data-aos="fade-right">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <a href="index.html" class="nav-brand">
         <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
-        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+        <div class="nav-brand-text">The Team <span>Scalpel</span></div>
       </a>
-      <div class="nav-links" style="align-items: center;">
+      <div class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
         <a href="feedback.html">Feedback</a>
-        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="nav-divider"></div>
         <div class="language-selector">
           <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
             <option value="en">English</option>
             <option value="hi">हिन्दी</option>
           </select>
         </div>
-        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+        <a href="appointment.html" class="btn btn-primary nav-cta">Book Consult</a>
       </div>
-      <button class="mobile-menu-btn">
+      <button class="mobile-menu-btn" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,34 +52,33 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" style="min-height: 100vh; display: flex; align-items: center; padding-top: 5rem;">
+  <section class="hero">
     <div class="liquid-bg">
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
     </div>
-    <div class="container asymmetric-grid" style="position: relative; z-index: 2;">
-      <div class="hero-content" style="grid-column: span 7;">
-        <span class="overline" data-aos="fade-up" style="color: var(--accent); font-weight: 600; letter-spacing: 3px;">Surgical Mastery</span>
-        <h1 class="reveal-mask" style="line-height: 1.1; margin: 1.5rem 0;">Precision Meets<br><span style="color: var(--primary); background: linear-gradient(120deg, var(--primary), var(--secondary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Compassion</span></h1>
-        <p style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 550px; line-height: 1.8; opacity: 0.8;" data-aos="fade-up" data-aos-delay="200">Dr. Alok Agarwal redefines surgical care with robotic precision and laser-focused expertise, delivering elite outcomes with minimal recovery time.</p>
-        <div class="hero-actions" style="margin-top: 3rem;" data-aos="fade-up" data-aos-delay="400">
-          <a href="appointment.html" class="btn btn-primary" style="padding: 1.2rem 2.5rem; border-radius: 50px; box-shadow: var(--glow-primary);">Elite Consultation</a>
-          <a href="services.html" class="btn btn-outline" style="border: none; font-weight: 600; margin-left: 1rem;">Explore Procedures <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
+    <div class="container hero-container" style="position: relative; z-index: 2;">
+      <div class="hero-content">
+        <span class="overline" data-aos="fade-up">Surgical Mastery</span>
+        <h1 class="reveal-mask">Precision Meets<br><span class="gradient-text">Compassion</span></h1>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="200">Dr. Alok Agarwal redefines surgical care with robotic precision and laser-focused expertise, delivering elite outcomes with minimal recovery time.</p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+          <a href="appointment.html" class="btn btn-primary hero-btn-main">Elite Consultation</a>
+          <a href="services.html" class="btn btn-outline hero-btn-sub">Explore Procedures <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="hero-image" style="grid-column: span 5; position: relative;" data-aos="zoom-out" data-aos-delay="300">
-        <div style="position: relative; z-index: 2;">
-          <img src="images/dr.png" alt="Dr. Alok Agarwal" style="width: 100%; filter: drop-shadow(0 20px 50px rgba(10, 54, 34, 0.25)); transition: transform var(--transition-normal);">
+      <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+        <div class="image-wrapper">
+          <img src="images/dr.png" alt="Dr. Alok Agarwal" class="hero-img-main">
           <div class="hero-badge badge-cases" data-aos="fade-left" data-aos-delay="700">
             <span class="badge-num">10k+</span>
             <span class="badge-label">Successful Cases</span>
           </div>
           <div class="hero-badge badge-certified" data-aos="fade-right" data-aos-delay="900">
-            <span><i class="fas fa-certificate" style="color: var(--accent); margin-right: 8px;"></i> Board Certified Surgeon</span>
+            <span><i class="fas fa-certificate"></i> Board Certified Surgeon</span>
           </div>
         </div>
-        <!-- Decorative Circle Glow -->
-        <div style="position: absolute; top: 50%; left: 50%; translate: -50% -50%; width: 120%; height: 120%; background: radial-gradient(circle, rgba(10,54,34,0.05) 0%, transparent 70%); z-index: 1;"></div>
+        <div class="decorative-glow"></div>
       </div>
     </div>
   </section>
@@ -215,19 +214,20 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
-      <div>
-        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
-        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          The Team <span>Scalpel</span>
+        </div>
+        <p class="footer-tagline">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div>
+      <div class="footer-links-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="about.html">About Surgeon</a></li>
@@ -235,20 +235,20 @@
           <li><a href="gallery.html">Video Gallery</a></li>
           <li><a href="contact.html">Contact Clinic</a></li>
           <li><a href="appointment.html">Book Appointment</a></li>
-          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+          <li><a href="about.html#support" class="support-link">Support Our Cause</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Services</h4>
+      <div class="footer-services-col">
+        <h4>Specialties</h4>
         <ul>
           <li><a href="services.html#general">General Surgery</a></li>
           <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
           <li><a href="services.html#laser">Laser Precision</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
+      <div class="footer-contact-col">
+        <h4>Get In Touch</h4>
+        <ul class="contact-list">
           <li><i class="fas fa-phone"></i> +91 8130574541</li>
           <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
           <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>
@@ -257,7 +257,7 @@
     </div>
     <div class="container footer-bottom">
       <p>&copy; 2026 The Team Scalpel Practice. All Rights Reserved.</p>
-      <p style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Website Designed &amp; Developed by <strong>Nikunj Bhardwaj</strong> | <a href="mailto:nikunjbhardwaj987@gmail.com" style="color: var(--accent); text-decoration: underline;">nikunjbhardwaj987@gmail.com</a></p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.4);">Website Designed &amp; Developed by <strong>Nikunj Bhardwaj</strong> | <a href="mailto:nikunjbhardwaj987@gmail.com" style="color: var(--accent); text-decoration: underline;">nikunjbhardwaj987@gmail.com</a></p>
     </div>
   </footer>
 

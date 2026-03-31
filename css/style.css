@@ -728,7 +728,7 @@ a {
 }
 
 .service-grid.reverse {
-  direction: ltr; /* Reset if needed */
+  direction: ltr;
 }
 
 .service-grid.reverse .service-image {
@@ -793,17 +793,25 @@ a {
 }
 
 @media (max-width: 992px) {
-  .service-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .service-grid,
+  .service-grid.reverse {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
   }
-  .service-content, .service-image {
-    grid-column: span 12 !important;
+  .service-grid .service-image,
+  .service-grid.reverse .service-image {
+    width: 100% !important;
+    order: 0 !important;
+    grid-column: unset !important;
     padding-left: 0 !important;
-    order: 2 !important;
   }
-  .service-image {
+  .service-grid .service-content,
+  .service-grid.reverse .service-content {
+    width: 100% !important;
     order: 1 !important;
+    grid-column: unset !important;
+    padding-left: 0 !important;
   }
 }
 
@@ -1087,10 +1095,16 @@ a {
     flex-direction: column-reverse;
   }
   .service-detail-section {
-    padding: 4rem 0;
+    padding: 4rem 0 2rem;
   }
   .service-detail-section div[style*="padding-left: 4rem"] {
     padding-left: 0 !important;
+  }
+  .service-hero {
+    padding: 7rem 0 2.5rem !important;
+  }
+  .service-hero h1 {
+    font-size: 2rem !important;
   }
 }
 

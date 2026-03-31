@@ -146,14 +146,28 @@ if (document.readyState === 'loading') {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize AOS with Elite Smoothing
-  AOS.init({
-    duration: 1000,
-    easing: 'ease-out-quint',
-    once: true,
-    mirror: false,
-    anchorPlacement: 'top-bottom',
-  });
+  // Initialize AOS with Elite Smoothing (only if AOS is loaded)
+  try {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-quint',
+      once: true,
+      mirror: false,
+      anchorPlacement: 'top-bottom',
+    });
+  } catch(e) { /* AOS not loaded on this page */ }
+
+  // Global Navbar Scroll Effect (works on every page)
+  const navEl = document.querySelector('.navbar');
+  if (navEl) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navEl.classList.add('scrolled');
+      } else {
+        navEl.classList.remove('scrolled');
+      }
+    });
+  }
 
   try {
     // Awwwards-Level Custom Cursor

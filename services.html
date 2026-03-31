@@ -22,38 +22,6 @@
     .service-detail-section:nth-child(odd) {
       background-color: var(--background);
     }
-    .service-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    .service-grid.reverse {
-      direction: rtl;
-    }
-    .service-grid.reverse > * {
-      direction: ltr;
-    }
-    .service-image {
-      background-color: var(--white);
-      aspect-ratio: 16/9;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow-md);
-      font-size: 5rem;
-      border: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-    }
-    .service-image::before {
-       content: '';
-       position: absolute;
-       top:0; left:0; width:100%; height:100%;
-       background: var(--primary);
-       opacity: 0.05;
-    }
     .details-list {
       margin-top: 1.5rem;
       list-style: none;

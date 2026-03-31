@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Feedback | Dr. Alok Agarwal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .feedback-hero {
+      background: linear-gradient(to right, var(--primary-dark), var(--primary));
+      padding: 10rem 0 4rem;
+      color: var(--white);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="loader-content" data-aos="zoom-in">
+      <img src="images/logo.png" alt="Dr. Alok Agarwal Logo" class="loader-logo">
+      <div class="loader-bar"></div>
+      <p style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); letter-spacing: -1px; font-size: 1.5rem;">The Team <span style="font-weight: 800;">Scalpel</span></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
+        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+      </a>
+      <div class="nav-links" style="align-items: center;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html" class="active">Feedback</a>
+        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="language-selector">
+          <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="feedback-hero">
+    <div class="container">
+      <h1 style="color: var(--white);">Patient Feedback</h1>
+      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">Your experience matters to us. Please share your thoughts on your treatment with Dr. Alok Agarwal so we can continue to improve our standard of care.</p>
+    </div>
+  </section>
+
+  <!-- Feedback Form -->
+  <section class="section" style="background-color: var(--background);">
+    <div class="container" style="max-width: 800px;">
+      <div class="form-container" style="margin-top: -8rem; position: relative; z-index: 10;">
+        <form id="feedbackForm">
+          <h3 style="margin-bottom: 2rem;">Rate Your Experience</h3>
+          
+          <div class="form-group" style="text-align: center; margin-bottom: 2rem;">
+            <label style="font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem;">Overall Rating</label>
+            <div class="rating-group">
+              <input type="radio" id="star5" name="rating" value="5" required>
+              <label for="star5" title="5 stars">★</label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4" title="4 stars">★</label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3" title="3 stars">★</label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2" title="2 stars">★</label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1" title="1 star">★</label>
+            </div>
+          </div>
+          
+          <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label for="ptName">Patient Name</label>
+              <input type="text" id="ptName" name="ptName" class="form-control" required placeholder="E.g. Rajesh Kumar">
+            </div>
+            <div>
+              <label for="treatment">Treatment Received</label>
+              <select id="treatment" name="treatment" class="form-control" required>
+                <option value="">Select Treatment</option>
+                <option value="General Surgery">General Surgery</option>
+                <option value="Laparoscopic Surgery">Laparoscopic Procedure</option>
+                <option value="Laser Surgery">Laser Treatment</option>
+                <option value="Consultation">General Consultation</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="review">Your Review / Comments</label>
+            <textarea id="review" name="review" class="form-control" rows="5" required placeholder="Tell us about the care you received, the staff behavior, and your recovery..."></textarea>
+          </div>
+          
+          <button type="submit" id="submitFeedbackBtn" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Submit Feedback securely</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
+        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Surgeon</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Video Gallery</a></li>
+          <li><a href="contact.html">Contact Clinic</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#general">General Surgery</a></li>
+          <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
+          <li><a href="services.html#laser">Laser Precision</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 8130574541</li>
+          <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 The Team Scalpel Practice. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="fab-container">
+    <button class="fab-btn fab-chat-toggle" id="openChatBtn" title="Ask Virtual Assistant"><i class="fas fa-robot"></i></button>
+    <a href="https://wa.me/918130574541" class="fab-btn fab-whatsapp" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918130574541" class="fab-btn fab-call" title="Call for Emergency"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script src="js/script.js"></script>
+  <div id="google_translate_element" style="display:none;"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}function changeLanguage(lang){var c=document.querySelector('.goog-te-combo');if(c){c.value=lang;c.dispatchEvent(new Event('change'));}}</script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+
+
+
+

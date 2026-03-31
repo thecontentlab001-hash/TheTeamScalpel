@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Dr. Alok Agarwal | Premium Surgical Care</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .about-hero {
+      background: var(--background);
+      padding: 10rem 0 4rem;
+    }
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .profile-img-container {
+      position: sticky;
+      top: 120px;
+    }
+    .profile-img {
+      max-width: 100%;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      image-rendering: high-quality;
+    }
+    .credentials {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      border: 1px solid var(--border);
+    }
+    .credentials h4 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .bio-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .bio-section p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .timeline {
+      margin-top: 3rem;
+      border-left: 2px solid var(--primary-light);
+      padding-left: 2rem;
+    }
+    .timeline-item {
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.65rem;
+      top: 0.25rem;
+      width: 1rem;
+      height: 1rem;
+      background: var(--white);
+      border: 3px solid var(--primary);
+      border-radius: 50%;
+    }
+    .timeline-item h4 {
+      margin-bottom: 0.5rem;
+    }
+    .timeline-item span {
+      display: inline-block;
+      font-size: 0.875rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="loader-content" data-aos="zoom-in">
+      <img src="images/logo.png" alt="Dr. Alok Agarwal Logo" class="loader-logo">
+      <div class="loader-bar"></div>
+      <p style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); letter-spacing: -1px; font-size: 1.5rem;">The Team <span style="font-weight: 800;">Scalpel</span></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
+        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+      </a>
+      <div class="nav-links" style="align-items: center;">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="language-selector">
+          <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container profile-grid">
+      <!-- Image Column -->
+      <div class="profile-img-container">
+        <img src="images/dr.png" alt="Dr. Alok Agarwal" class="profile-img">
+        
+        <div class="credentials">
+          <h4>Board Certifications</h4>
+          <ul style="list-style-type: none; font-size: 0.9rem; color: var(--text-muted);">
+            <li style="margin-bottom: 0.5rem;">MBBS, MS (General Surgery)</li>
+            <li style="margin-bottom: 0.5rem;">Fellow of Minimal Access Surgery (FMAS)</li>
+            <li>Registered Medical Practitioner (Delhi Medical Council)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bio Column -->
+      <div class="bio-section">
+        <span style="color: var(--primary); font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Lead Surgeon</span>
+        <h2 class="reveal-text"><span>Dr. Alok Agarwal, MBBS, MS, FMAS</span></h2>
+        
+        <p>With over two decades of dedicated surgical excellence, Dr. Alok Agarwal is recognized across Baraut, UP and the NCR for his pioneering work in minimally invasive techniques and advanced laser procedures.</p>
+        
+        <p>His philosophy centers around <strong>"Precision paired with profound compassion."</strong> Dr. Agarwal believes that while technology (like advanced lasers) is crucial for optimal physical outcomes, understanding the patient's individual emotional and medical needs—and navigating the local healthcare logistics smoothly—is the true hallmark of excellent healthcare.</p>
+        
+        <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Educational Journey</h3>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>Present</span>
+            <h4>Director of Surgery, The Team Scalpel</h4>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">Leading surgical interventions at our state-of-the-art facility in Baraut Medicity Hospital, maintaining a 99% success rate in minimally invasive outpatient procedures.</p>
+          </div>
+          <div class="timeline-item">
+            <span>Previous</span>
+            <h4>Senior Consultant Surgeon</h4>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">Served prominently in top metropolitan corporate hospitals, managing critical trauma, oncological surgeries, and highly complex gastrointestinal reconstructions.</p>
+          </div>
+          <div class="timeline-item">
+            <span>Academic</span>
+            <h4>Master of Surgery (MS)</h4>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">Completed rigorous postgraduate surgical training with academic distinction from a premier medical institute in India.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 4rem; padding: 3rem; background: var(--primary-dark); color: var(--white); border-radius: 12px; text-align: center;">
+          <h3 style="color: var(--white); margin-bottom: 1rem;">Experience the Standard of Excellence</h3>
+          <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Take the first step towards recovery under world-class supervision.</p>
+          <a href="appointment.html" class="btn btn-primary" style="background: var(--accent); color: var(--primary-dark); border: none;">Request a Consultation</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section -->
+  <section id="support" class="support-section">
+    <div class="liquid-bg">
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="container support-grid">
+      <div class="support-content" data-aos="fade-right">
+        <span class="support-tag">Philanthropy</span>
+        <h2>Support the Cause</h2>
+        <p>Beyond our clinical walls, Dr. Alok Agarwal is deeply committed to supporting surgical initiatives for the underprivileged. We believe that financial constraints should never be a barrier to life-saving medical care.</p>
+        <p>Your support goes directly toward funding minimally invasive procedures for patients in need within the Baraut and NCR regions. Every contribution helps us expand our outreach and bring premium surgical standards to all.</p>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <div style="width: 40px; height: 1px; background: var(--accent);"></div>
+          <span style="font-weight: 600; color: var(--primary); font-size: 0.9rem;">Empowering Lives through Precision</span>
+        </div>
+      </div>
+      <div class="support-card" data-aos="fade-left">
+        <div class="qr-wrapper">
+          <img src="images/donation.png" alt="Support the Cause QR Code" class="qr-image">
+        </div>
+        <h4 style="margin-bottom: 0.5rem; letter-spacing: 1px;">SCAN TO SUPPORT</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Compatible with PhonePe, GPay & BHIM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
+        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Surgeon</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Video Gallery</a></li>
+          <li><a href="contact.html">Contact Clinic</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#general">General Surgery</a></li>
+          <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
+          <li><a href="services.html#laser">Laser Precision</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 8130574541</li>
+          <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 The Team Scalpel Practice. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="fab-container">
+    <button class="fab-btn fab-chat-toggle" id="openChatBtn" title="Ask Virtual Assistant"><i class="fas fa-robot"></i></button>
+    <a href="https://wa.me/918130574541" class="fab-btn fab-whatsapp" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918130574541" class="fab-btn fab-call" title="Call for Emergency"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script src="js/script.js"></script>
+  <div id="google_translate_element" style="display:none;"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}function changeLanguage(lang){var c=document.querySelector('.goog-te-combo');if(c){c.value=lang;c.dispatchEvent(new Event('change'));}}</script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

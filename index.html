@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Alok Agarwal | Premium Surgical Practice</title>
+  <meta name="description" content="Advanced Surgical Care with Precision & Compassion in New Delhi.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/video-player.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="loader-content" data-aos="zoom-in">
+      <img src="images/logo.png" alt="Dr. Alok Agarwal Logo" class="loader-logo">
+      <div class="loader-bar"></div>
+      <p style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); letter-spacing: -1px; font-size: 1.5rem;">The Team <span style="font-weight: 800;">Scalpel</span></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand" data-aos="fade-right">
+        <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
+        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+      </a>
+      <div class="nav-links" style="align-items: center;">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="language-selector">
+          <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 100vh; display: flex; align-items: center; padding-top: 5rem;">
+    <div class="liquid-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container asymmetric-grid" style="position: relative; z-index: 2;">
+      <div class="hero-content" style="grid-column: span 7;">
+        <span class="overline" data-aos="fade-up" style="color: var(--accent); font-weight: 600; letter-spacing: 3px;">Surgical Mastery</span>
+        <h1 class="reveal-mask" style="line-height: 1.1; margin: 1.5rem 0;">Precision Meets<br><span style="color: var(--primary); background: linear-gradient(120deg, var(--primary), var(--secondary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Compassion</span></h1>
+        <p style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 550px; line-height: 1.8; opacity: 0.8;" data-aos="fade-up" data-aos-delay="200">Dr. Alok Agarwal redefines surgical care with robotic precision and laser-focused expertise, delivering elite outcomes with minimal recovery time.</p>
+        <div class="hero-actions" style="margin-top: 3rem;" data-aos="fade-up" data-aos-delay="400">
+          <a href="appointment.html" class="btn btn-primary" style="padding: 1.2rem 2.5rem; border-radius: 50px; box-shadow: var(--glow-primary);">Elite Consultation</a>
+          <a href="services.html" class="btn btn-outline" style="border: none; font-weight: 600; margin-left: 1rem;">Explore Procedures <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
+        </div>
+      </div>
+      <div class="hero-image" style="grid-column: span 5; position: relative;" data-aos="zoom-out" data-aos-delay="300">
+        <div style="position: relative; z-index: 2;">
+          <img src="images/dr.png" alt="Dr. Alok Agarwal" style="width: 100%; filter: drop-shadow(0 20px 50px rgba(10, 54, 34, 0.25)); transition: transform var(--transition-normal);">
+          <div class="hero-badge badge-cases" data-aos="fade-left" data-aos-delay="700">
+            <span class="badge-num">10k+</span>
+            <span class="badge-label">Successful Cases</span>
+          </div>
+          <div class="hero-badge badge-certified" data-aos="fade-right" data-aos-delay="900">
+            <span><i class="fas fa-certificate" style="color: var(--accent); margin-right: 8px;"></i> Board Certified Surgeon</span>
+          </div>
+        </div>
+        <!-- Decorative Circle Glow -->
+        <div style="position: absolute; top: 50%; left: 50%; translate: -50% -50%; width: 120%; height: 120%; background: radial-gradient(circle, rgba(10,54,34,0.05) 0%, transparent 70%); z-index: 1;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <div class="stats-banner container" style="margin-top: -4rem;">
+    <div class="stat-item">
+      <div class="overline">Legacy</div>
+      <div class="stat-num counter">20+</div>
+      <div class="stat-label">Years Expertise</div>
+    </div>
+    <div class="stat-item">
+      <div class="overline">Precision</div>
+      <div class="stat-num counter">10000+</div>
+      <div class="stat-label">Cases Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="overline">Care</div>
+      <div class="stat-num counter">100%</div>
+      <div class="stat-label">Patient Commitment</div>
+    </div>
+  </div>
+
+  <!-- Cashless Insurance Banner -->
+  <section class="insurance-banner">
+    <div class="container">
+      <span class="overline" style="color: var(--accent);">Accepted Partners</span>
+      <h3 style="color: var(--white); font-size: 1.5rem; margin-top: 1rem;">Empanelled Insurances & Cashless Facilities</h3>
+      <div class="insurance-logos" style="justify-content: center; gap: 1rem;">
+        <div class="badge">Star Health</div>
+        <div class="badge">HDFC ERGO</div>
+        <div class="badge">ICICI Lombard</div>
+        <div class="badge">CGHS Approved</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section" style="position: relative; background: var(--white); overflow: hidden;">
+    <div class="liquid-bg">
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 5rem;">
+        <div data-aos="fade-right">
+          <span class="overline" style="color: var(--primary);">Our Expertise</span>
+          <h2 style="font-size: 3rem; margin-top: 1rem;">Revolutionary Care<br>Precision Recovery</h2>
+        </div>
+        <div data-aos="fade-left">
+          <p style="max-width: 400px; opacity: 0.7;">Utilizing FDA-approved laser technology and minimally invasive laparoscopic protocols for uncompromised safety.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-icon" style="background: rgba(10,54,34,0.05); color: var(--primary); box-shadow: var(--glow-primary); display: flex; align-items: center; justify-content: center;"><i class="fas fa-heartbeat"></i></div>
+          <h3 style="margin: 1.5rem 0;">General Surgery</h3>
+          <p>World-class abdominal and gastrointestinal care utilizing the latest evidence-based protocols.</p>
+          <a href="services.html#general" class="card-link" style="margin-top: 2rem;">Detailed Overview <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon" style="background: rgba(13,71,161,0.05); color: var(--secondary); box-shadow: 0 0 20px rgba(13,71,161,0.1); display: flex; align-items: center; justify-content: center;"><i class="fas fa-microscope"></i></div>
+          <h3 style="margin: 1.5rem 0;">Laparoscopic</h3>
+          <p>Minimally invasive techniques for faster recovery, minimal scarring, and elite precision.</p>
+          <a href="services.html#laparoscopic" class="card-link" style="margin-top: 2rem;">Detailed Overview <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon" style="background: rgba(212,175,55,0.05); color: var(--accent); box-shadow: var(--glow-accent); display: flex; align-items: center; justify-content: center;"><i class="fas fa-bolt"></i></div>
+          <h3 style="margin: 1.5rem 0;">Laser Precision</h3>
+          <p>State-of-the-art laser tech for bloodless, painless, and ultra-precise surgical interventions.</p>
+          <a href="services.html#laser" class="card-link" style="margin-top: 2rem;">Detailed Overview <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctor Preview Section -->
+  <section class="section bg-white">
+    <div class="container doctor-section">
+      <div class="doctor-img-wrapper" data-aos="fade-right">
+        <img src="images/dr.png" alt="Dr. Alok Agarwal" class="doctor-img">
+        <div class="exp-badge">
+          <span class="num">20+</span>
+          <span>Years of<br>Excellence</span>
+        </div>
+      </div>
+      <div class="doctor-content" data-aos="fade-left">
+        <h2>Dr. Alok Agarwal, MBBS, MS, FMAS</h2>
+        <h3>Lead Surgeon & Medical Director</h3>
+        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">A pioneer in minimally invasive and robotic-assisted surgeries in India, Dr. Agarwal brings decades of international experience to provide exceptional care at The Team Scalpel.</p>
+        <ul>
+          <li>Fellow of Minimal Access Surgery (FMAS)</li>
+          <li>MBBS, MS in General Surgery</li>
+          <li>Awarded "Excellence in Healthcare" Medical Board Award</li>
+        </ul>
+        <a href="about.html" class="btn btn-primary" style="margin-top: 1rem;">View Full Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media & Connect Section -->
+  <section class="social-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <h2 style="margin-bottom: 1rem;">Connect with The Team Scalpel</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Stay updated with the latest surgical breakthroughs, health tips, and clinic news across our official platforms.</p>
+      </div>
+      
+      <div class="social-grid">
+        <!-- Facebook Card -->
+        <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-card facebook" data-aos="fade-up" data-aos-delay="0">
+          <i class="fab fa-facebook-f"></i>
+          <h4>Facebook</h4>
+          <p>Join our community for daily health updates and patient success stories.</p>
+          <span class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Follow Page</span>
+        </a>
+        
+        <!-- Instagram Card -->
+        <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-card instagram" data-aos="fade-up" data-aos-delay="100">
+          <i class="fab fa-instagram"></i>
+          <h4>Instagram</h4>
+          <p>Visual highlights of our state-of-the-art facilities and surgical precision.</p>
+          <span class="btn btn-outline" style="padding: 0.5rem 1.5rem;">View Profile</span>
+        </a>
+        
+        <!-- YouTube Card -->
+        <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-card youtube" data-aos="fade-up" data-aos-delay="200">
+          <i class="fab fa-youtube"></i>
+          <h4>YouTube</h4>
+          <p>Deep-dive surgery highlights and educational webinars by Dr. Alok Agarwal.</p>
+          <span class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Subscribe</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
+        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Surgeon</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Video Gallery</a></li>
+          <li><a href="contact.html">Contact Clinic</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#general">General Surgery</a></li>
+          <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
+          <li><a href="services.html#laser">Laser Precision</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 8130574541</li>
+          <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 The Team Scalpel Practice. All Rights Reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Website Designed &amp; Developed by <strong>Nikunj Bhardwaj</strong> | <a href="mailto:nikunjbhardwaj987@gmail.com" style="color: var(--accent); text-decoration: underline;">nikunjbhardwaj987@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Floating Bottom-Left Logo -->
+  <a href="index.html" class="home-floating-logo" title="The Team Scalpel">
+    <img src="images/logo.png" alt="The Team Scalpel Logo">
+  </a>
+
+  <!-- Floating Action Buttons -->
+  <div class="fab-container" data-aos="zoom-in" data-aos-delay="600">
+    <button class="fab-btn fab-chat-toggle" id="openChatBtn" title="Ask Virtual Assistant"><i class="fas fa-robot"></i></button>
+    <a href="https://wa.me/918130574541" class="fab-btn fab-whatsapp" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918130574541" class="fab-btn fab-call" title="Call for Emergency"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      offset: 100,
+      duration: 600,
+      easing: 'ease-out-quint'
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

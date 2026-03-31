@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Video Player Test | The Team Scalpel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/video-player.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background: #050505; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem;">
+
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 1rem;">Secure Premium Streaming</h1>
+    <p style="color: rgba(255,255,255,0.6); max-width: 600px;">Testing the hardened video player with dark aesthetic and proxy-ready logic.</p>
+  </div>
+
+  <!-- PREMIUM VIDEO PLAYER COMPONENT -->
+  <div class="video-container paused" id="surgicalVideoPlayer">
+    <!-- The actual video element with no-download attributes -->
+    <video preload="metadata" playsinline controlsList="nodownload" disablePictureInPicture>
+        <!-- For local testing, we use your existing surgery video -->
+        <!-- In production, this would be: yourserver.com/api/stream/TOKEN -->
+        <source src="opertion video/VID-20250925-WA0012.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Invisible Interaction Layer (Blocks standard right-click save-as) -->
+    <div class="interaction-mask"></div>
+
+    <!-- Big Play Button Overlay -->
+    <div class="p-big-play">
+      <i class="fas fa-play"></i>
+    </div>
+
+    <!-- CUSTOM CONTROLS -->
+    <div class="player-controls">
+      <!-- Progress Bar -->
+      <div class="p-progress-container">
+        <div class="p-progress-buffer"></div>
+        <div class="p-progress-bar"></div>
+      </div>
+
+      <div class="p-controls-row">
+        <!-- Left Side Controls -->
+        <div class="p-left-controls">
+          <button class="p-btn p-play-toggle" title="Play/Pause">
+            <i class="fas fa-play"></i>
+          </button>
+          
+          <div class="volume-container">
+            <button class="p-btn p-volume-btn" title="Mute/Unmute">
+              <i class="fas fa-volume-up"></i>
+            </button>
+            <input type="range" class="volume-slider" min="0" max="1" step="0.1" value="1">
+          </div>
+
+          <div class="p-time">0:00 / 0:00</div>
+        </div>
+
+        <!-- Right Side Controls -->
+        <div class="p-right-controls">
+          <div class="p-badge">HD STREAM</div>
+          <button class="p-btn p-settings" title="Settings">
+            <i class="fas fa-cog"></i>
+          </button>
+          <button class="p-btn p-fullscreen" title="Fullscreen">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 4rem; text-align: center; padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px;">
+    <h3 style="color: var(--accent); margin-bottom: 1rem;">ðŸ›¡ï¸ Security Status</h3>
+    <ul style="list-style: none; text-align: left; opacity: 0.8; font-size: 0.9rem; line-height: 1.8;">
+      <li>âœ… <strong>Right-Click Disabled</strong>: Try right-clicking the video to see the protection in action.</li>
+      <li>âœ… <strong>No Download Button</strong>: The browser's default download option is suppressed.</li>
+      <li>âœ… <strong>Source Obscurity</strong>: Ready for token-based proxying (as configured in `server/*.js`).</li>
+      <li>âœ… <strong>Overlay Protection</strong>: Invisible mask prevents "Save Video As" tricks.</li>
+    </ul>
+    <p style="margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.5;">Note: For the MEGA streaming to work, you must deploy the proxy server provided in the `/server/` directory.</p>
+  </div>
+
+  <script src="js/player.js"></script>
+  <script>
+    // Initialize the player once the DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      initElitePlayer('surgicalVideoPlayer');
+    });
+  </script>
+</body>
+</html>
+

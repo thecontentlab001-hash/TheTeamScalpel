@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Dr. Alok Agarwal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .contact-hero {
+      background: var(--background);
+      padding: 10rem 0 4rem;
+      text-align: center;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: stretch;
+      padding: 6rem 0;
+    }
+    .contact-card {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+    .contact-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(10, 54, 34, 0.05);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    .hours-table th, .hours-table td {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    .hours-table th {
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+    .hours-table td.closed {
+      color: #e53935;
+      font-weight: 500;
+    }
+    .map-placeholder {
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      min-height: 400px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+    }
+    .map-placeholder iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="loader-content" data-aos="zoom-in">
+      <img src="images/logo.png" alt="Dr. Alok Agarwal Logo" class="loader-logo">
+      <div class="loader-bar"></div>
+      <p style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); letter-spacing: -1px; font-size: 1.5rem;">The Team <span style="font-weight: 800;">Scalpel</span></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
+        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+      </a>
+      <div class="nav-links" style="align-items: center;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="feedback.html">Feedback</a>
+        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="language-selector">
+          <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1 style="font-size: 3rem;">Get in Touch</h1>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">We are here to answer any questions you may have about our surgical services, TPA/insurance processing, or facility locations.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container contact-grid">
+    
+    <!-- Info Form -->
+    <div class="contact-card">
+      <h3 style="margin-bottom: 2.5rem; font-size: 1.75rem;">Clinic Information</h3>
+      
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <h4 style="margin-bottom: 0.25rem;">Address</h4>
+          <p style="color: var(--text-muted);">Baraut Medicity Hospital,<br>Baraut, UP</p>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <h4 style="margin-bottom: 0.25rem;">Phone / Emergency / Appointment</h4>
+          <p style="color: var(--text-muted); font-size: 1.125rem; font-weight: 600; color: var(--primary);">+91 8130574541</p>
+        </div>
+      </div>
+      
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <h4 style="margin-bottom: 0.25rem;">Email Contact</h4>
+          <p style="color: var(--text-muted);">bkdr.alokagrawal@gmail.com</p>
+        </div>
+      </div>
+
+      <table class="hours-table">
+        <tbody>
+          <tr>
+            <th>Monday - Saturday</th>
+            <td>9:00 AM - 7:00 PM</td>
+          </tr>
+          <tr>
+            <th>Sunday</th>
+            <td>10:00 AM - 2:00 PM (Prior Appt Only)</td>
+          </tr>
+          <tr>
+            <th>Emergency</th>
+            <td style="color: var(--primary); font-weight: 600;">24/7 Available via Call</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Map Area using specific coordinates -->
+    <div class="map-placeholder">
+      <iframe 
+        src="https://maps.google.com/maps?q=29.1,77.24&z=15&output=embed" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <div style="background: var(--background); padding: 4rem 0; text-align: center; border-top: 1px solid var(--border);">
+    <div class="container">
+      <h3>Ready to schedule?</h3>
+      <p style="margin-top: 0.5rem; margin-bottom: 1.5rem; color: var(--text-muted);">Use our secure online portal to submit an intake form instantly to Dr. Agarwal's inbox.</p>
+      <a href="appointment.html" class="btn btn-primary">Go to Intake Form</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
+        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Surgeon</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Video Gallery</a></li>
+          <li><a href="contact.html">Contact Clinic</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#general">General Surgery</a></li>
+          <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
+          <li><a href="services.html#laser">Laser Precision</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 8130574541</li>
+          <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 The Team Scalpel Practice. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="fab-container">
+    <button class="fab-btn fab-chat-toggle" id="openChatBtn" title="Ask Virtual Assistant"><i class="fas fa-robot"></i></button>
+    <a href="https://wa.me/918130574541" class="fab-btn fab-whatsapp" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918130574541" class="fab-btn fab-call" title="Call for Emergency"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script src="js/script.js"></script>
+  <div id="google_translate_element" style="display:none;"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}function changeLanguage(lang){var c=document.querySelector('.goog-te-combo');if(c){c.value=lang;c.dispatchEvent(new Event('change'));}}</script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+
+
+
+

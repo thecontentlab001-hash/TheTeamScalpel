@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Dr. Alok Agarwal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .service-hero {
+      background: var(--background);
+      padding: 10rem 0 4rem;
+      text-align: center;
+    }
+    .service-detail-section {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-detail-section:nth-child(even) {
+      background-color: var(--white);
+    }
+    .service-detail-section:nth-child(odd) {
+      background-color: var(--background);
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .service-grid.reverse {
+      direction: rtl;
+    }
+    .service-grid.reverse > * {
+      direction: ltr;
+    }
+    .service-image {
+      background-color: var(--white);
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      font-size: 5rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-image::before {
+       content: '';
+       position: absolute;
+       top:0; left:0; width:100%; height:100%;
+       background: var(--primary);
+       opacity: 0.05;
+    }
+    .details-list {
+      margin-top: 1.5rem;
+      list-style: none;
+    }
+    .details-list li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .details-list li::before {
+      content: '•';
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="loader-content" data-aos="zoom-in">
+      <img src="images/logo.png" alt="Dr. Alok Agarwal Logo" class="loader-logo">
+      <div class="loader-bar"></div>
+      <p style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); letter-spacing: -1px; font-size: 1.5rem;">The Team <span style="font-weight: 800;">Scalpel</span></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
+        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+      </a>
+      <div class="nav-links" style="align-items: center;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="language-selector">
+          <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="service-hero bg-white">
+    <div class="container text-center">
+      <span class="overline">Specialized Protocols</span>
+      <h1 class="reveal-text"><span>Elite Surgical Excellence</span></h1>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 2rem auto; border-top: 1px solid var(--border); padding-top: 1rem;">Combining world-class medical innovation with decades of clinical precision to redefine patient outcomes.</p>
+    </div>
+  </section>
+
+  <!-- General Surgery -->
+  <section id="general" class="service-detail-section">
+    <div class="container asymmetric-grid">
+      <div style="grid-column: span 7;">
+        <span class="overline">Abdominal Specialist</span>
+        <h2 class="reveal-text"><span>General Surgery</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.125rem; margin-top: 1.5rem;">Expertise in addressing a broad range of complex diseases affecting the abdomen, digestive tract, endocrine system, and beyond.</p>
+        
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Conditions Treated</h4>
+        <ul class="details-list">
+          <li>Hernia Repair (Inguinal, Ventral, Umbilical)</li>
+          <li>Gallbladder Disease (Cholecystectomy)</li>
+          <li>Appendicitis</li>
+          <li>Thyroid and Parathyroid Disorders</li>
+        </ul>
+
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Recovery & Insurance</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Recovery times vary depending on the procedure. We accept major health insurance including CGHS and TPA cashless facilities.</p>
+        
+        <a href="appointment.html" class="btn btn-primary" style="margin-top: 2rem;">Consult a Specialist</a>
+      </div>
+      <div class="service-image tilt-card" style="grid-column: span 5; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="images/general_surgery.png" alt="General Surgery Operating Room" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Laparoscopic Surgery -->
+  <section id="laparoscopic" class="service-detail-section">
+    <div class="container asymmetric-grid reverse" style="direction: ltr;">
+      <div class="service-image tilt-card" style="grid-column: span 5; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="images/laparoscopic_surgery.png" alt="Laparoscopic Surgery AI" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div style="grid-column: span 7; padding-left: 4rem;">
+        <span class="overline">Minimally Invasive</span>
+        <h2 class="reveal-text"><span>Laparoscopic Surgery</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.125rem; margin-top: 1.5rem;">Pioneering minimally invasive techniques that utilize a tiny camera and specialized instruments inserted through minor incisions.</p>
+        
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Elite Benefits</h4>
+        <ul class="details-list">
+          <li>Significantly less post-operative pain</li>
+          <li>Minimal scarring compared to open surgery</li>
+          <li>Shorter hospital stays (often outpatient/day-care)</li>
+          <li>Faster return to normal activities</li>
+        </ul>
+
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Procedure Overview</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Performed under general anesthesia. Small 0.5cm incisions are made to accommodate the laparoscope, and high-definition monitors are used to perfectly guide Dr. Agarwal's movements.</p>
+        
+        <a href="appointment.html" class="btn btn-outline" style="margin-top: 2rem;">Schedule Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Laser Surgery -->
+  <section id="laser" class="service-detail-section">
+    <div class="container asymmetric-grid">
+      <div style="grid-column: span 7;">
+        <span class="overline">Precision Technology</span>
+        <h2 class="reveal-text"><span>Laser Surgery Procedures</span></h2>
+        <p style="color: var(--text-muted); font-size: 1.125rem; margin-top: 1.5rem;">State-of-the-art technological advancement offering unmatched precision for targeted tissue treatment without bleeding.</p>
+        
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">Conditions Treated</h4>
+        <ul class="details-list">
+          <li>Varicose Veins (Endovenous Laser Ablation)</li>
+          <li>Proctology conditions (Hemorrhoids, Fistulas, Piles)</li>
+          <li>Soft Tissue Tumors</li>
+        </ul>
+
+        <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.9rem;">The Tech Edge</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Laser procedures seal nerve endings and blood vessels instantaneously as they cut, largely eliminating bleeding and dramatically reducing post-operative pain. Highly preferred day-care setup.</p>
+        
+        <a href="appointment.html" class="btn btn-primary" style="margin-top: 2rem;">Inquire About Laser</a>
+      </div>
+      <div class="service-image tilt-card" style="grid-column: span 5; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="images/laser_surgery.png" alt="Laser Surgery AI" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
+        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Surgeon</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Video Gallery</a></li>
+          <li><a href="contact.html">Contact Clinic</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#general">General Surgery</a></li>
+          <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
+          <li><a href="services.html#laser">Laser Precision</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 8130574541</li>
+          <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 The Team Scalpel Practice. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fab-container">
+    <button class="fab-btn fab-chat-toggle" id="openChatBtn" title="Ask Virtual Assistant"><i class="fas fa-robot"></i></button>
+    <a href="https://wa.me/918130574541" class="fab-btn fab-whatsapp" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918130574541" class="fab-btn fab-call" title="Call for Emergency"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script src="js/script.js"></script>
+  <div id="google_translate_element" style="display:none;"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}function changeLanguage(lang){var c=document.querySelector('.goog-te-combo');if(c){c.value=lang;c.dispatchEvent(new Event('change'));}}</script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+
+

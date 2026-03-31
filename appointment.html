@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Dr. Alok Agarwal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .appointment-hero {
+      background: linear-gradient(to right, var(--primary-dark), var(--primary));
+      padding: 10rem 0 4rem;
+      color: var(--white);
+      text-align: center;
+    }
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: flex-start;
+      margin-top: -4rem;
+      position: relative;
+      z-index: 10;
+    }
+    .booking-info {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="loader-content" data-aos="zoom-in">
+      <img src="images/logo.png" alt="Dr. Alok Agarwal Logo" class="loader-logo">
+      <div class="loader-bar"></div>
+      <p style="font-family: var(--font-heading); font-weight: 800; color: var(--primary); letter-spacing: -1px; font-size: 1.5rem;">The Team <span style="font-weight: 800;">Scalpel</span></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="Logo" class="nav-brand-logo">
+        The Team <span style="color: var(--primary-light); filter: brightness(1.2);">Scalpel</span>
+      </a>
+      <div class="nav-links" style="align-items: center;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+        <div style="width: 1px; height: 20px; background: var(--border); margin: 0 0.5rem;"></div>
+        <div class="language-selector">
+          <select id="languageSelect" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Book Consult</a>
+      </div>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="appointment-hero">
+    <div class="container">
+      <h1 style="color: var(--white);">Patient Intake Form</h1>
+      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">Streamline your healthcare journey. Fill out the secure form below to request a consultation with Dr. Alok Agarwal.</p>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="section" style="padding-top: 0; background-color: var(--background);">
+    <div class="container booking-grid">
+      
+      <!-- The Form -->
+      <div class="form-container">
+        <form id="appointmentForm">
+          <h3 style="margin-bottom: 2rem;">Schedule Your Consult</h3>
+          
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" required placeholder="E.g. Rajesh Kumar">
+          </div>
+          
+          <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+91">
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="mail@example.com">
+            </div>
+          </div>
+          
+          <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+            <div>
+              <label for="time">Preferred Time</label>
+              <select id="time" name="time" class="form-control" required>
+                <option value="">Select Time</option>
+                <option value="Morning">Morning (8am - 12pm)</option>
+                <option value="Afternoon">Afternoon (12pm - 4pm)</option>
+                <option value="Evening">Evening (4pm - 7pm)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Type of Consultation</label>
+            <select id="service" name="service" class="form-control" required>
+              <option value="">Select Service</option>
+              <option value="General Surgery">General Surgery</option>
+              <option value="Laparoscopic Surgery">Laparoscopic Procedure</option>
+              <option value="Laser Surgery">Laser Treatment</option>
+              <option value="Second Opinion">Second Opinion</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Medical Concern / Message (Optional)</label>
+            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Briefly describe your symptoms or reason for visit..."></textarea>
+          </div>
+          
+          <div class="form-group" style="display: flex; gap: 0.5rem; margin-top: 1rem; margin-bottom: 2rem;">
+            <input type="checkbox" id="consent" name="consent" required style="margin-top: 5px;">
+            <label for="consent" style="font-weight: 400; font-size: 0.875rem; color: var(--text-muted); line-height: 1.4;">I consent to have my appointment details forwarded securely to Dr. Agarwal's official inbox (bkdr.alokagrawal@gmail.com).</label>
+          </div>
+          
+          <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Request Appointment</button>
+        </form>
+      </div>
+      
+      <!-- Info Column -->
+      <div class="booking-info">
+        <h3>What happens next?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; margin-top: 1rem;">Your request is sent directly to our clinic administration across a secure channel.</p>
+        
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
+          <li style="display: flex; gap: 1rem;">
+            <div style="font-size: 1.5rem;"><i class="fas fa-bullhorn" style="color: var(--primary);"></i></div>
+            <div>
+              <strong style="color: var(--primary-dark);">Direct Communication</strong>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">The form prepares a secure email payload directed specifically to Dr. Agarwal's primary contact address.</p>
+            </div>
+          </li>
+          <li style="display: flex; gap: 1rem;">
+            <div style="font-size: 1.5rem;"><i class="fas fa-user-md" style="color: var(--primary);"></i></div>
+            <div>
+              <strong style="color: var(--primary-dark);">Review by Clinic</strong>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">The administrative team at Baraut reviews your case instantly.</p>
+            </div>
+          </li>
+          <li style="display: flex; gap: 1rem;">
+            <div style="font-size: 1.5rem;"><i class="fas fa-phone-alt" style="color: var(--primary);"></i></div>
+            <div>
+              <strong style="color: var(--primary-dark);">Scheduling Callback</strong>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">A specialist coordinator will call you back on your provided number to finalize your slot and discuss Mediclaim processing.</p>
+            </div>
+          </li>
+        </ul>
+        
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+          <h4 style="margin-bottom: 1rem; color: #e53935;">Emergency Case?</h4>
+          <p style="font-size: 0.875rem; margin-bottom: 1rem;">If you are experiencing severe pain or a surgical emergency, please do not use this form. Contact our emergency line instantly.</p>
+          <a href="tel:+918130574541" style="color: var(--primary); font-weight: 600; font-size: 1.125rem;">Call Now: +91 8130574541</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-brand" style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--white);">The Team <span style="color: var(--white);">Scalpel</span></div>
+        <p style="margin-top: 1rem;">Setting the standard in modern, compassionate surgical care utilizing breakthrough technologies.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1DDgVy4aKz/" target="_blank" class="social-link-item" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/bkdr.alokagrawal?igsh=dzVscTBubnVxMTNu" target="_blank" class="social-link-item" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@dralokagrawalms?si=pueynsFiQazM0M4P" target="_blank" class="social-link-item" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Surgeon</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Video Gallery</a></li>
+          <li><a href="contact.html">Contact Clinic</a></li>
+          <li><a href="appointment.html">Book Appointment</a></li>
+          <li><a href="about.html#support" style="color: var(--accent); font-weight: 700;">Support Our Cause</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#general">General Surgery</a></li>
+          <li><a href="services.html#laparoscopic">Laparoscopic Protocol</a></li>
+          <li><a href="services.html#laser">Laser Precision</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> +91 8130574541</li>
+          <li><i class="fas fa-envelope"></i> bkdr.alokagrawal@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Baraut Medicity Hospital,<br>Baraut, UP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 The Team Scalpel Practice. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="fab-container">
+    <button class="fab-btn fab-chat-toggle" id="openChatBtn" title="Ask Virtual Assistant"><i class="fas fa-robot"></i></button>
+    <a href="https://wa.me/918130574541" class="fab-btn fab-whatsapp" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918130574541" class="fab-btn fab-call" title="Call for Emergency"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <script src="js/script.js"></script>
+  <div id="google_translate_element" style="display:none;"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}function changeLanguage(lang){var c=document.querySelector('.goog-te-combo');if(c){c.value=lang;c.dispatchEvent(new Event('change'));}}</script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
